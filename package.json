@@ -21,7 +21,8 @@
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "typescript": "^4.6.3"
   },
   "lint-staged": {
     "*.{vue,svelte,js,jsx,css}": [
@@ -50,7 +51,18 @@
     "parserOptions": {
       "sourceType": "module",
       "ecmaVersion": 2018
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/vite.config.js"
+        ],
+        "env": {
+          "node": true,
+          "browser": false
+        }
+      }
+    ]
   },
   "prettier": {
     "trailingComma": "es5",
